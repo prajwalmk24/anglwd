@@ -1,0 +1,87 @@
+
+
+<!-- <mat-form-field class="example-full-width">
+  <mat-label>Favorite food</mat-label>
+  <input matInput placeholder="Type something" (input)="addUserEvent($event)" />
+</mat-form-field> -->
+
+
+<!-- <div class="example-button-row">
+  <button mat-stroked-button (click)="addUser()">Add User</button>
+  <button mat-stroked-button (click)="addUser()" [disabled]="!disButton">
+    Add User
+  </button>
+  <div *ngIf="condStrucDirec; else ifelseCondFromAbove">{{ user }}</div>
+
+  <ng-template #ifelseCondFromAbove>
+    {{ "false cond executed before clicking the button" }}
+  </ng-template>
+</div> -->
+
+
+<!-- Styling Dynamically for the Component Templates using ngStyle attribute Directive in angular. -->
+<!-- <h1 [ngStyle]="{ 'background-color': dynamicStyle() }">
+  {{ "The generated color " }} with the element {{ name }}
+</h1> -->
+
+<!-- 19. Apply CSS Classes Dynamically with ngClass Attribute Directive in the Angular Template Component -->
+<!-- <h1
+  [ngStyle]="{ 'background-color': dynamicStyle() }"
+  [ngClass]="{ offline: this.name=='Updated Value' }"
+>
+  {{ "The generated color " }} with the element {{ name }}
+</h1> -->
+
+<!-- HERE 
+  [ngClass]="{ offline: condition?? }
+               offline: this.name=='Updated Value' 
+-->
+
+<!-- PRACTICE -->
+<!-- <h1 class="my-2"
+  [ngClass]="{ offline: this.name2=='pract' }"
+>
+  {{ "The generated color " }} with the element {{ name }}
+</h1>
+
+<button mat-stroked-button (click)="practice()" [disabled]="!disButton">
+  Add User
+</button> -->
+
+<br>
+<hr>
+<hr>
+<br><br>
+
+
+<!-- please look here for @output the event from add-user comp to app compo 
+using 
+1.template refernce variable #newItem 
+2.[(ngModel)]-->
+
+<!-- 1.template refernce variable #newItem  -->
+<!-- <mat-form-field>
+  <mat-label>Add an item:</mat-label>
+<input matInput placeholder="Type something" #newItem/>
+</mat-form-field>
+<button type="button" (click)="addNewItem(newItem.value)">Add to parent's list</button> -->
+
+<br>  
+<!-- 2.[(ngModel)]--> 
+<!-- <mat-form-field>
+  <mat-label>Add an item:</mat-label>
+  <input matInput placeholder="Type something" [(ngModel)]="someVal"/>
+</mat-form-field>
+<button type="button" (click)="addNewItem2(newItem.value)">Add to parent's list</button> -->
+<h4>App-temp</h4>
+<!-- <app-temp></app-temp> -->
+
+<!-- tm ref varialble with @viewchild -->
+<!-- <h4>after temp</h4>
+<mat-form-field>
+  <mat-label>Add an item:</mat-label>
+  <input matInput placeholder="Type something" #newViewChild/>
+</mat-form-field>
+<button type="button" (click)="addNewItem3()">Add to parent's list</button>
+<hr> -->
+

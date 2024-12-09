@@ -1,0 +1,26 @@
+<!-- <p>comp-life-cycle works!</p>
+
+{{'user from '}} with name {{valfromTemp}}  
+<br>
+{{'name input onchanges'}}{{name}} -->
+
+
+<!-- <div style="text-align: center; padding: 30px;">
+    <h1>This is the parent component</h1>
+    <button (click)="veganValue=true">Vegan Food</button>
+    <button (click)="veganValue=false">Non-Vegan Food</button>
+    <app-direct [vegan]='veganValue'/>
+    </div>
+
+
+    <h2>This is the child component</h2>
+<app-direct *ngIf='!vegan; else elseBlock'>Here is your Chicken wings and fries</app-direct>
+<ng-template #elseBlock><h4>Here is your Vegan salad</h4></ng-template> -->
+
+
+<h2>This is the child component</h2>
+<p>{{message}}</p>
+
+<h2>This is the child component</h2>
+<h4 *ngIf='!vegan; else elseBlock'>Here is your Chicken wings and fries</h4>
+<ng-template #elseBlock><h4>Here is your Vegan salad</h4></ng-template>

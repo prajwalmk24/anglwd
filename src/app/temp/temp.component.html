@@ -1,0 +1,43 @@
+<!-- <mat-form-field>
+  <mat-label>Add an item:</mat-label>
+  <input matInput placeholder="Type something" [(ngModel)]="someVal"/>
+</mat-form-field>
+<button type="button" (click)="addNewItem23()">Add to parent's list</button> -->
+
+<!-- <h3>{{wwqd}}</h3> -->
+
+<app-users *ngFor="let u of arr" [someT]="u" [name]="name" >
+
+ <div #accessContentChild>{{'acces the elements of users comp from --------------ng content> '}}{{u}}</div>
+</app-users>
+<br>
+
+<!-- compont life cycle -->
+
+<!-- <mat-form-field>
+  <mat-label>Add an item:</mat-label>
+  <input matInput placeholder="Type something" [(ngModel)]="someVal" />
+</mat-form-field>
+<button type="button" (click)="addNewItem231()">Add to parent's list</button>
+
+<br /> -->
+
+<!-- <app-comp-life-cycle *ngFor="let u of rr" [someCompLC]="u" [name]="name2">
+</app-comp-life-cycle><br /> -->
+<!-- <button mat-raised-button color="warn" (click)="checkOnchangeMehtod()">
+  Destroy
+</button> -->
+<!-- here for users componrt we need to send data from temp comp so we use prperty binding 
+ beside the loop 
+[anytext]=wht to send
+ here we are iside loop we send 
+ [someT]="u"
+-->
+
+<!-- 
+  please refer 27videp of lwd 
+
+  since we sending the through @Input('someT') valfromTemp: any; in Users Component 
+  instead we can use <ng-content>
+  it will send the html content 
+ -->
