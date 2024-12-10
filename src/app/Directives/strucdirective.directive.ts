@@ -1,11 +1,30 @@
-import { Directive } from '@angular/core';
+import { Directive, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[appStrucdirective]',
+  selector: 'appStrucdirective',
   standalone: true
 })
-export class StrucdirectiveDirective {
+export class StrucdirectiveDirective implements OnInit {
 
-  constructor() { }
+
+  @Input() customIf:boolean= true;
+
+  constructor(
+    private tempRef:TemplateRef<any>,
+    private viewContRef:ViewContainerRef
+  ) { }
+
+  ngOnInit(): void {
+      if(this.customIf){
+        this.viewContRef.createEmbeddedView(this.tempRef);
+      }
+      else{
+        this.viewContRef.clear;
+      }
+  }
+
+  
+
+
 
 }

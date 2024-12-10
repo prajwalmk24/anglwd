@@ -26,7 +26,29 @@
     Customizing the directive with ngStyle
 </appCustomDirectiv> -->
 
-<br><br>
+<!-- <br><br>
 <appCustomDirectiv [defaultColor]="'red'" [afterColor]="'yellow'">
     Customizing the directive with ngStyle
-</appCustomDirectiv>
+</appCustomDirectiv> -->
+
+<!-- 38. Create Custom Structural Directive in the Angular using TemplateRef and ViewContainerRef -->
+
+<button (click)="practice()" [disabled]="!customIf">
+    Add User
+  </button>
+
+  
+<DIV *ngIf="customIf">
+    38. Create Custom Structural Directive in the Angular using TemplateRef and ViewContainerRef
+</DIV>
+
+<!-- behind scenes this  -->
+<ng-template [ngIf]="customIf">
+    <div>38. Create Custom Structural Directive in the Angular using TemplateRef and ViewContainerRef</div>
+</ng-template>
+
+
+<!-- 38. Create Custom Structural Directive in the Angular using TemplateRef and ViewContainerRef  -->
+<div *appStrucdirective="customIf">
+    Create Custom Structural Directive in the Angular using TemplateRef and ViewContainerRef based on true or false 
+</div>
