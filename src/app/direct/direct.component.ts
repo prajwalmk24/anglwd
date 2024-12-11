@@ -8,7 +8,7 @@ import { ThisReceiver } from '@angular/compiler';
 @Component({
   selector: 'app-direct',
   standalone: true,
-  imports: [CommonModule, StrucdirectiveDirective],
+  imports: [CommonModule],
   templateUrl: './direct.component.html',
   styleUrl: './direct.component.css',
   hostDirectives: [CustomDirectivDirective],
@@ -37,5 +37,11 @@ practice() {
    this.customIf=false;
     }
 
+
+    // calling from service component through direct component 
+    
+    @Input() u!:{ name: string; status: string; };
+
+    //adduser from service
 
 }

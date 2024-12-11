@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
@@ -97,10 +97,10 @@ export class AddUserComponent {
   }
 
   //method 2
-  someVal: string = '';
-  addNewItem2(value: string) {
-    this.newItemEvent.emit(this.someVal);
-  }
+  // someVal: string = '';
+  // addNewItem2(value: string) {
+  //   this.newItemEvent.emit(this.someVal);
+  // }
 
 
   //@Viewchild is used to get the dom element from template ref variable 
@@ -110,6 +110,14 @@ export class AddUserComponent {
     console.log('@viewchild', this.nVC);
     this.newItemEvent.emit(this.nVC.nativeElement.value);
   }
+
+// 
+ @Input() valueFromParent: string = '';
+
+ //
+
+
+ output:string ='';
 
 
  

@@ -14,13 +14,16 @@
 
 <!-- compont life cycle -->
 
-<!-- <mat-form-field>
+<mat-form-field>
   <mat-label>Add an item:</mat-label>
   <input matInput placeholder="Type something" [(ngModel)]="someVal" />
 </mat-form-field>
 <button type="button" (click)="addNewItem231()">Add to parent's list</button>
-
-<br /> -->
+<h4>{{someVal +"         two way data binding , see below same can be used in Add UserComponent  "}}</h4>  
+<BR>
+<app-add-user [valueFromParent]="someVal"  (newItemEvent)="addItem($event)"></app-add-user>
+<!-- pleas refer above 24 for both @Input and @Output event  -->
+<br />
 
 <!-- <app-comp-life-cycle *ngFor="let u of rr" [someCompLC]="u" [name]="name2">
 </app-comp-life-cycle><br /> -->

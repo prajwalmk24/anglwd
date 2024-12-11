@@ -85,3 +85,11 @@ using
 <button type="button" (click)="addNewItem3()">Add to parent's list</button>
 <hr> -->
 
+
+<!-- <h4>{{'some val '+ valueFromParent}}</h4> -->
+
+<h4>{{'output evemt ------->    '+ valueFromParent}}
+<br><br>
+  <label for="item-input">Add an item:</label>
+  <input type="text" id="item-input" #newItem>
+  <button type="button" (click)="addNewItem(newItem.value)">Add to parent's list</button>
